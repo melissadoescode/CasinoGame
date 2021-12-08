@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace CasinoGame.Enums
 {
-    public enum ResultType
+    public enum ActionType
     {
-        PlayerWins, 
-        PlayerLoses, 
-        DealerWins, 
-        DealerLoses,
-        Invalid, 
-        Draw, 
+        None, 
+        Hit, 
+        Stand
     }
 }

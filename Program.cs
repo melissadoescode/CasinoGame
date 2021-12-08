@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CasinoGame.Services;
+using System;
 
 namespace CasinoGame
 {
@@ -6,7 +7,12 @@ namespace CasinoGame
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var casino = new CasinoService();
+            var interaction = new InteractionService();
+
+            Console.Title = "Casino Game";
+            interaction.WelcomePlayer();
+            casino.StartRound();
         }
     }
 }
