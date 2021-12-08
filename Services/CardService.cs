@@ -87,58 +87,5 @@ namespace CasinoGame.Services
             Console.WriteLine(symbol + " " + cardType + " of " + suitType);
             Console.ResetColor();
         }
-
-        //private List<Suit> _suits;
-        //public List<Suit> Suits
-        //{
-        //    get
-        //    {
-        //        _suits = _suits ?? getSuits();
-        //        return _suits;
-        //    }
-        //}
-
-        //private List<Card> _cards;
-        //public List<Card> Cards
-        //{
-        //    get
-        //    {
-        //        _cards = _cards ?? getCards(Suits);
-        //        return _cards;
-        //    }
-        //}
-
-        //private List<Suit> getSuits() =>
-        //       new List<Suit>
-        //       {
-        //        new Suit(SuitType.Diamonds, '♦', ConsoleColor.Red),
-        //        new Suit(SuitType.Hearts, '♥', ConsoleColor.Red),
-        //        new Suit(SuitType.Spades, '♠', ConsoleColor.Black),
-        //        new Suit(SuitType.Clubs, '♣', ConsoleColor.Black)
-        //       };
-
-        //private List<Card> getCards(List<Suit> suits)
-        //{
-        //    var cards = new List<Card>();
-
-        //    suits.ForEach(s =>
-        //    {
-        //        cards.Add(new Card(CardType.Ace, s, "A", 1));
-        //        cards.Add(new Card(CardType.Two, s, "2", 2));
-        //        cards.Add(new Card(CardType.Three, s, "3", 3));
-        //        cards.Add(new Card(CardType.Four, s, "4", 4));
-        //        cards.Add(new Card(CardType.Five, s, "5", 5));
-        //        cards.Add(new Card(CardType.Six, s, "6", 6));
-        //        cards.Add(new Card(CardType.Seven, s, "7", 7));
-        //        cards.Add(new Card(CardType.Eight, s, "8", 8));
-        //        cards.Add(new Card(CardType.Nine, s, "9", 9));
-        //        cards.Add(new Card(CardType.Ten, s, "10", 10));
-        //        cards.Add(new Card(CardType.Jack, s, "J", 10));
-        //        cards.Add(new Card(CardType.Queen, s, "Q", 10));
-        //        cards.Add(new Card(CardType.King, s, "K", 10));
-        //    });
-
-        //    return cards;
-        //}
     }
 }
