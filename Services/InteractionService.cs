@@ -15,7 +15,7 @@ namespace CasinoGame.Services
         {
             Console.Write("Welcome to the casino, what's your name? ");
             var name = Console.ReadLine();
-            Console.Write($"Hello {name}, what is your bankroll today? ");
+            Console.Write($"Hello {name}, what is your bankroll today? R");
             var bankroll = int.Parse(Console.ReadLine());
             return new Player(name, bankroll);
         }

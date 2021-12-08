@@ -16,6 +16,9 @@ namespace CasinoGame.Services
         private readonly PlayerService playerService;
         private readonly DealerService dealerService;
 
+        private readonly int minBet = 10;
+        private readonly int maxBet = 500;
+
         public CasinoService()
         {
             deckService = new DeckService();
@@ -117,7 +120,9 @@ namespace CasinoGame.Services
                     case "STAND":
                         break;
                     default:
-                        Console.WriteLine($"Valid Moves:" +
+                        Console.WriteLine($"\n{new string('-', 60)}\n" +
+                                          $"Valid Moves:" +
+                                          $"\n{new string('-', 60)}" +
                                           $"\nType 'Hit' or 'Stand'" +
                                           $"\nHit: The option to take another card if you don’t believe " +
                                           $"\nyour hand will beat the dealer's as it stands. Remember " +
@@ -127,6 +132,15 @@ namespace CasinoGame.Services
                                           $"\ncards. This is done when you think you’ll beat the dealer," +
                                           $"\nor when taking another card would make the risk of a loss " +
                                           $"\ntoo high." +
+                                          $"\n{new string('-', 60)}\n " +
+                                          $"Rules: " +
+                                          $"\n{new string('-', 60)}" +
+                                          $"\n- The player is dealt cards until they choose to stop recieving new cards (hit or stand). " +
+                                          $"\n- The players total is added each time they get a new card." +
+                                          $"\n- The player loses if their hand value goes over the count of 21." +
+                                          $"\n- If the player chooses to stand before 21, the dealer will have a turn of recieving cards." +
+                                          $"\n- The dealer loses if their hand value goes over the count of 21." +
+                                          $"\n- The highest hand wins" +
                                           $"\n\n Press any key to continue.");
                         Console.ReadKey();
                         break;
@@ -136,8 +150,9 @@ namespace CasinoGame.Services
 
         public bool GetBetAmount()
         {
-            Console.Write($"Current Chip Count: {Player.Chips}");
-            Console.Write($"\nHow much are you betting for round {Player.HandsCompleted}? ");
+            Console.Write($"Current Chip Count: {Player.Chips}" +
+                          $"\nNote: Minimum Bet - R{minBet} & Maximum Bet - R{maxBet}\n");
+            Console.Write($"\nHow much are you betting for round {Player.HandsCompleted}? R");
             string s = Console.ReadLine();
 
             if (Int32.TryParse(s, out int bet) && bet >= 10 && Player.Chips >= bet)

@@ -12,7 +12,7 @@ namespace CasinoGame.Models
         public static string Name { get; set; }
         public static List<CardService> Hand { get; set; }
         public static int Bet { get; set; }
-        public static int Chips { get; set; } = 500;
+        public static int Chips { get; set; } 
         public static int HandsCompleted { get; set; } = 1;
         public static int Wins { get; set; }
 
